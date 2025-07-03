@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #4285f4;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 70vh;
+    padding: 1rem;
+}
+
+#blocklyDiv {
+    flex: 1;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel {
+    width: 40%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.request-config {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+#requestPreview {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    min-height: 100px;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3367d6;
+}
+
+.response-section {
+    flex: 2;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.status-display {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+}
+
+#statusCode {
+    font-weight: bold;
+    color: #4285f4;
+}
+
+#responseOutput {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    min-height: 200px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.code-panel {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#generatedCode {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+}
