@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const workspace = Blockly.inject('blocklyDiv', {
         toolbox: {
-            "kind": "categoryToolbox",
+            "kind": "categoryToolbox",  /*organisation de toolbox en categories*/
             "contents": [
                 {
                     "kind": "category",
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             ]
         },
-        trashcan: true
+        trashcan: true /*active la corbeille*/
     });
 
     // Bloc http_request
-    Blockly.Blocks['http_request'] = {
+    Blockly.Blocks['http_request'] = { //definition du bloc blocly http_request
         init: function () {
             this.appendDummyInput()
                 .appendField("Méthode")
