@@ -1,0 +1,20 @@
+name: Déploiement site web statique
+
+on:
+  push:
+    branches:
+      - main  # Lance le workflow à chaque push sur la branche main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v3
+
+      - name: Déploiement sur GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Racine du projet à publier
