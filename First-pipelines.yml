@@ -1,0 +1,22 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Installer Node.js'
+
+  - script: |
+      echo "Projet HTML/CSS/JS détecté"
+      ls -la
+    displayName: 'Lister les fichiers du projet'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.SourcesDirectory)'
+      ArtifactName: 'site-web'
+      publishLocation: 'Container'
