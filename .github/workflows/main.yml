@@ -3,7 +3,7 @@ name: Déploiement site web statique
 on:
   push:
     branches:
-      - main  # Lance le workflow à chaque push sur la branche main
+      - master  # Lance le workflow à chaque push sur la branche main
 
 jobs:
   build-and-deploy:
