@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testeur d'API No-Code</title>
+    <script src="https://unpkg.com/blockly@9.0.0/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly@9.0.0/msg/fr.js"></script>
+    <link href="https://unpkg.com/blockly@9.0.0/blockly.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Testeur d'API REST Visuel</h1>
+    </div>
+
+    <div class="container">
+        <div id="blocklyDiv"></div>
+        <div class="control-panel">
+            <div class="request-config">
+                <h3>Configuration de la requête</h3>
+                <div id="requestPreview"></div>
+            </div>
+            <button id="executeBtn">Exécuter la requête</button>
+            <div class="response-section">
+                <h3>Réponse</h3>
+                <div class="status-display">
+                    Statut: <span id="statusCode">-</span>
+                </div>
+                <pre id="responseOutput"></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="code-panel">
+        <h3>Code Généré</h3>
+        <pre id="generatedCode"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
